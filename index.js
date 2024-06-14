@@ -1,5 +1,15 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  // given an array, goes through combinations of any two elements to see if sum of
+  // them equals target
+
+for(let i = 0; i<array.length;i++){
+  for(let j = i+1;j<array.length; j++){
+    if (array[i] + array[j] == target){
+      return true
+    }
+  }}
+  return false
 }
 
 /* 
@@ -8,10 +18,17 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  takes first element of array
+  for rest of elements if that element plus the first quals target, then true
 */
 
 /*
   Add written explanation of your solution here
+  for each element in an array, loop through the rest of the array.  This achieves
+  looking over all combinations.  If the value from the outer loop and the value from the inner
+  loop sums to the target, return true.  Don't return false within the inner loop
+  because you want to go through all elements in outerloop.  return false outside of the innerloop to ensure this
+  
 */
 
 // You can run `node index.js` to view these console logs
